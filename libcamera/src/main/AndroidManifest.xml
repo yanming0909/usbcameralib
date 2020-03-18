@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jiangdg.libusbcamera">
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <service android:name="com.jiangdg.usbcamera.MonitorService"
+            android:enabled="true"
+            android:process="com.patent.MonitorService">
+            <intent-filter>
+                <action android:name="com.patent.MonitorService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <service android:name="com.jiangdg.usbcamera.MonitorService2"
+            android:enabled="true"
+            android:process="com.patent.MonitorService2">
+            <intent-filter>
+                <action android:name="com.patent.MonitorService2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
